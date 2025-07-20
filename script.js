@@ -14,16 +14,17 @@ console.log(`My second best hobby is ${upskillProfile.hobbies[0]}`)
 
 // a code that explains a call back function
 
-function jason(message1, message2) {
- message1, message2
+function runCallbacks(callback1, callback2) {
+ callback1();
+ callback2();
 }
 
 function callbackDefinition() {
  console.log("Callbacks are functions that are passed as arguments into another function")
 }
 
-function callbackExample() {
- console.log("The parameters of a function are used to outline how a function handles the values(arguments) that are passed to it \n \nWhen you call a function, you pass in the arguments in the brackets immediately after the function name. These arguments are handled in the way you outlined when defining the function\n \nI defined two functions that log messages to the console (let's call them A and B). Then I defined another function (let's call it Jason) that has two parameters and stated what it was to do with the parameters \n \nWhen I called Jason, within its brackets, I passed in A and B as its arguments \n \nTherefore, functions A and B were executed even though I didnt call them directly. That's why you see these two messages in the console")
+function callExplanation() {
+ console.log("I had a function, runCallbacks, that had two parameters which I both defined as functions. \n \nThen I had two other functions that log the explanations of callbacks to the console. When I finally called ran runCallbacks, I passed in the references(names) of these two functions as the arguments. \n \nBecause I had already defined any argument I pass into runCallbacks as functions using its parameters, these two functions are run when I call runCallbacks.")
 }
 
-jason(callbackDefinition(), callbackExample());
+runCallbacks(callbackDefinition, callExplanation);
